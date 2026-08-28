@@ -5,28 +5,6 @@ title: "Privacidade — Faq Espírita"
 permalink: /apps/faq-espirita/privacidade/
 ---
 
-<div class="aviso aviso--bloco">
-  <p><strong>Falta decidir duas coisas antes de publicar.</strong></p>
-  <p>
-    <strong>Firebase.</strong> Se a app tiver Analytics, Crashlytics ou
-    Messaging, há uma secção comentada no ficheiro
-    <code>privacidade/faq-espirita.md</code> para descomentar — e a declaração
-    de Segurança dos Dados na Play Console tem de passar a dizer que são
-    recolhidos identificadores do dispositivo.
-  </p>
-  <p>
-    <strong>Perguntas já publicadas.</strong> A secção sobre eliminação de conta
-    diz que as perguntas públicas ficam no lugar, sem ligação a quem as fez.
-    Isso exige apagar o identificador do autor no momento em que a conta é
-    eliminada. Se preferires apagar as perguntas todas, muda o texto.
-  </p>
-  <p>
-    A Segurança dos Dados na Play Console declara que os dados não são cifrados
-    em trânsito. Como o webservice é HTTPS, essa declaração está errada e
-    convém corrigi-la.
-  </p>
-</div>
-
 Esta é a única aplicação do Apps Espíritas com contas de utilizador. As outras
 não recolhem nada.
 
@@ -53,7 +31,8 @@ Ao enviar uma pergunta:
 - A categoria da pergunta
 
 Não é recolhido mais nada. Não há entrada por conta Google ou Facebook, não é
-guardado o endereço IP e não há registo de utilização da aplicação.
+guardado o endereço IP, não há serviços de estatísticas ou de publicidade
+dentro da aplicação e não há registo de utilização.
 
 ## Para que servem
 
@@ -90,17 +69,6 @@ dados.
 Fora disto, nenhum dado é vendido, cedido ou partilhado com quem quer que
 seja.
 
-<!--
-DESCOMENTAR SE A APP USAR FIREBASE — e ajustar conforme os SDK que lá estiverem.
-
-## Serviços da Google
-
-A aplicação usa o Firebase, da Google, para [registo de falhas / estatísticas
-de utilização / notificações]. Esses serviços recolhem identificadores do
-dispositivo e dados técnicos, tratados pela Google segundo a política de
-privacidade dela. Esses dados não são associados à conta.
--->
-
 ## Moderação
 
 Uma pergunta pode ser apagada pelo Apps Espíritas se for ofensiva, se não
@@ -134,4 +102,4 @@ apresentar reclamação à Comissão Nacional de Proteção de Dados.
 
 Se esta política mudar, a data em baixo muda também.
 
-<p class="mono">Última atualização: [preencher]</p>
+<p class="mono">Última atualização: 28/08/2026</p>

@@ -5,14 +5,6 @@ title: "Privacidade — Escala Espírita"
 permalink: /apps/escala-espirita/privacidade/
 ---
 
-<div class="aviso aviso--bloco">
-  <p><strong>Por confirmar antes de publicar.</strong></p>
-  <p>
-    Escrito a partir da declaração de Segurança dos Dados da ficha do Google
-    Play, que diz que a aplicação não recolhe nada.
-  </p>
-</div>
-
 ## Que dados são recolhidos
 
 Nenhum. A aplicação não pede dados, não cria conta e não faz ligação a
@@ -34,4 +26,4 @@ Para qualquer questão sobre esta política, escreva para
 <a href="mailto:{{ site.contacto_email }}">{{ site.contacto_email }}</a>.
 {% endif %}
 
-<p class="mono">Última atualização: [preencher]</p>
+<p class="mono">Última atualização: 28/08/2026</p>
