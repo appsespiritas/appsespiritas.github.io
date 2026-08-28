@@ -1,0 +1,16 @@
+<article class="cartao">
+  <a class="cartao__ligacao" href="{{ include.app.url | relative_url }}">
+    <img class="cartao__icone" src="{% if include.app.icone contains '://' %}{{ include.app.icone }}{% else %}{{ include.app.icone | relative_url }}{% endif %}" alt="" width="72" height="72">
+    <h3 class="cartao__nome">{{ include.app.titulo }}</h3>
+    <p class="cartao__resumo">{{ include.app.resumo }}</p>
+    <ul class="etiquetas">
+      {%- for etiqueta in include.app.etiquetas -%}
+      <li class="etiqueta">{{ etiqueta }}</li>
+      {%- endfor -%}
+      {%- if include.app.estado == "brevemente" -%}
+      <li class="etiqueta etiqueta--espera">Em preparação</li>
+      {%- endif -%}
+    </ul>
+    <span class="cartao__seta" aria-hidden="true">&rarr;</span>
+  </a>
+</article>

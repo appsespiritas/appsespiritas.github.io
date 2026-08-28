@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="envolve pagina">
+
+  <header class="proposicao proposicao--pagina">
+    {%- if page.numero -%}
+    <p class="proposicao__numero"><span>{{ page.numero }}</span></p>
+    {%- endif -%}
+    <h1 class="proposicao__pergunta">{{ page.titulo | default: page.title }}</h1>
+  </header>
+
+  <div class="prosa">
+    {{ content }}
+  </div>
+
+</article>

@@ -1,0 +1,37 @@
+<footer class="rodape">
+  <div class="envolve rodape__interior">
+
+    <div class="rodape__marca">
+      <p class="rodape__nome">Apps Espíritas</p>
+      <p class="rodape__nota">
+        Aplicações gratuitas para o estudo do Espiritismo.
+        Feitas em Portugal, sem custo e sem publicidade.
+      </p>
+    </div>
+
+    <nav class="rodape__ligacoes" aria-label="Rodapé">
+      <div>
+        <p class="rotulo">Aplicações</p>
+        <ul>
+          {%- assign lista = site.apps | sort: "ordem" -%}
+          {%- for app in lista -%}
+          <li><a href="{{ app.url | relative_url }}">{{ app.titulo }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div>
+        <p class="rotulo">Projeto</p>
+        <ul>
+          <li><a href="{{ '/sobre/' | relative_url }}">Sobre</a></li>
+          <li><a href="{{ '/contacto/' | relative_url }}">Contacto</a></li>
+          <li><a href="{{ '/privacidade/' | relative_url }}">Privacidade</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+  <div class="envolve rodape__base">
+    <p>© {{ 'now' | date: "%Y" }} Apps Espíritas</p>
+    <p>Android é uma marca registada da Google LLC.</p>
+  </div>
+</footer>

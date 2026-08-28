@@ -1,0 +1,118 @@
+---
+layout: default
+---
+{%- if page.play and page.play != "" -%}
+  {%- assign ligacao_play = page.play -%}
+{%- elsif page.package and page.package != "" -%}
+  {%- capture ligacao_play -%}https://play.google.com/store/apps/details?id={{ page.package }}{%- endcapture -%}
+{%- else -%}
+  {%- assign ligacao_play = "" -%}
+{%- endif -%}
+
+<article class="app">
+
+  <div class="envolve">
+    <a class="voltar" href="{{ '/#aplicacoes' | relative_url }}">
+      <span aria-hidden="true">&larr;</span> Todas as aplicações
+    </a>
+  </div>
+
+  <header class="envolve app__cabecalho">
+    <div class="app__identidade">
+      <img class="app__icone" src="{% if page.icone contains '://' %}{{ page.icone }}{% else %}{{ page.icone | relative_url }}{% endif %}" alt="" width="128" height="128">
+      <div>
+        <h1 class="app__nome">{{ page.titulo }}</h1>
+        <p class="app__resumo">{{ page.resumo }}</p>
+        <ul class="etiquetas">
+          <li class="etiqueta etiqueta--forte">Gratuita</li>
+          <li class="etiqueta">Sem publicidade</li>
+          {%- for plataforma in page.plataformas -%}
+          <li class="etiqueta">{{ plataforma }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+
+    <div class="app__acao">
+      {%- if page.estado == "brevemente" -%}
+        <p class="aviso">Ainda não publicada. Está em preparação.</p>
+      {%- elsif ligacao_play != "" -%}
+        <a class="botao" href="{{ ligacao_play }}" rel="noopener">Instalar no Google Play</a>
+      {%- endif -%}
+      {%- if page.ios -%}
+        <p class="app__ios">Versão para iPhone e iPad em preparação.</p>
+      {%- elsif page.nota_ios -%}
+        <p class="app__ios">{{ page.nota_ios }}</p>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="envolve app__corpo">
+
+    <div class="app__principal">
+      <div class="prosa">
+        {{ content }}
+      </div>
+
+      {%- if page.funcionalidades and page.funcionalidades.size > 0 -%}
+      <section class="bloco">
+        <h2 class="titulo-seccao">O que faz</h2>
+        <ul class="funcionalidades">
+          {%- for item in page.funcionalidades -%}
+          <li>{{ item }}</li>
+          {%- endfor -%}
+        </ul>
+      </section>
+      {%- endif -%}
+
+      {%- if page.capturas and page.capturas.size > 0 -%}
+      <section class="bloco">
+        <h2 class="titulo-seccao">Ecrãs</h2>
+        <div class="capturas">
+          {%- for captura in page.capturas -%}
+          <img src="{% if captura contains '://' %}{{ captura }}{% else %}{{ captura | relative_url }}{% endif %}" alt="Ecrã da aplicação {{ page.titulo }}" loading="lazy">
+          {%- endfor -%}
+        </div>
+      </section>
+      {%- endif -%}
+    </div>
+
+    <aside class="app__ficha" aria-label="Ficha técnica">
+      <h2 class="rotulo">Ficha técnica</h2>
+      <dl>
+        {%- if page.categoria -%}
+        <dt>Categoria no Google Play</dt><dd>{{ page.categoria }}</dd>
+        {%- endif -%}
+        {%- if page.classificacao -%}
+        <dt>Classificação etária</dt><dd>{{ page.classificacao }}</dd>
+        {%- endif -%}
+        {%- if page.requisitos -%}
+        <dt>Requisitos</dt><dd>{{ page.requisitos }}</dd>
+        {%- endif -%}
+        {%- if page.idiomas -%}
+        <dt>Idiomas</dt><dd>{{ page.idiomas | join: ", " }}</dd>
+        {%- endif -%}
+        {%- if page.package and page.package != "" -%}
+        <dt>Identificador</dt><dd class="mono">{{ page.package }}</dd>
+        {%- endif -%}
+        <dt>Preço</dt><dd>Gratuita, sem compras dentro da aplicação</dd>
+        <dt>Privacidade</dt>
+        <dd><a href="{{ page.url | append: 'privacidade/' | relative_url }}">Ver o que esta aplicação recolhe</a></dd>
+      </dl>
+    </aside>
+
+  </div>
+
+  <div class="envolve app__seguinte">
+    <p class="rotulo">Outras aplicações</p>
+    <ul class="lista-simples">
+      {%- assign lista = site.apps | sort: "ordem" -%}
+      {%- for outra in lista -%}
+        {%- if outra.url != page.url -%}
+        <li><a href="{{ outra.url | relative_url }}">{{ outra.titulo }}</a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+
+</article>

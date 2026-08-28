@@ -1,0 +1,71 @@
+---
+layout: default
+title: Apps Espíritas
+---
+
+<section class="hero">
+  <div class="envolve">
+    <div class="proposicao">
+      <p class="proposicao__numero"><span>1</span></p>
+      <h1 class="proposicao__pergunta">Para que servem estas aplicações?</h1>
+      <p class="proposicao__resposta">
+        Para pôr o estudo do Espiritismo ao alcance de quem o procura, sem
+        custo e sem contrapartida. Onde ficam os centros espíritas do país,
+        as perguntas que toda a gente faz no início e as obras onde estão as
+        respostas. Feitas em Portugal, em tempo livre, e gratuitas para sempre.
+      </p>
+    </div>
+
+    <ul class="factos">
+      <li>
+        <span class="factos__valor">{{ site.apps.size }}</span>
+        <span class="factos__rotulo">aplicações publicadas</span>
+      </li>
+      <li>
+        <span class="factos__valor">0 €</span>
+        <span class="factos__rotulo">agora e sempre</span>
+      </li>
+      <li>
+        <span class="factos__valor">Zero</span>
+        <span class="factos__rotulo">anúncios e rastreadores</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccao" id="aplicacoes">
+  <div class="envolve">
+    <header class="seccao__cabecalho">
+      <p class="rotulo">Para Android</p>
+      <h2 class="titulo-seccao">As aplicações</h2>
+      <p class="seccao__nota">
+        Todas disponíveis no Google Play. As versões para iPhone e iPad estão
+        a ser preparadas.
+      </p>
+    </header>
+
+    <div class="grelha">
+      {%- assign lista = site.apps | sort: "ordem" -%}
+      {%- for app in lista -%}
+        {% include app-card.html app=app %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section class="seccao seccao--convite">
+  <div class="envolve">
+    <div class="proposicao">
+      <p class="proposicao__numero"><span>2</span></p>
+      <h2 class="proposicao__pergunta">E o que falta fazer?</h2>
+      <p class="proposicao__resposta">
+        Isso decide-se com quem usa as aplicações. Se há uma ferramenta que
+        faz falta ao seu estudo ou ao trabalho do seu centro, diga qual é.
+        As ideias que chegam entram na lista do que vem a seguir.
+      </p>
+      <p>
+        <a class="botao" href="{{ '/contacto/' | relative_url }}">Sugerir uma aplicação</a>
+      </p>
+    </div>
+  </div>
+</section>

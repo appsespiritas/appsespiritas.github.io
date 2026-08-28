@@ -1,0 +1,34 @@
+title: Apps Espíritas
+description: >-
+  Aplicações gratuitas para o estudo do Espiritismo. Sem custo,
+  sem publicidade e sem recolha de dados pessoais.
+url: "https://appsespiritas.github.io"
+baseurl: ""
+lang: pt-PT
+contacto_email: "appsespiritas@gmail.com"
+formulario_google: ""
+
+collections:
+  apps:
+    output: true
+    permalink: /apps/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: apps
+    values:
+      layout: app
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
