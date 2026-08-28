@@ -32,8 +32,18 @@ em tempo livre — mas nenhuma se perde.
 </div>
 {% endif %}
 
-{% if site.contacto_email and site.contacto_email != "" %}
-## Por email
+## Sobre este formulário
 
-Se preferir, escreva para <a href="mailto:{{ site.contacto_email }}">{{ site.contacto_email }}</a>.
+O formulário é do Google Forms e está incorporado nesta página. Isso significa
+que, ao abri-la, o seu navegador contacta servidores da Google, que podem
+registar esse acesso segundo as regras de privacidade da própria Google. É a
+única página do site onde isso acontece.
+
+O que escrever no formulário chega a uma folha de cálculo à qual só o Apps
+Espíritas tem acesso. Não é usado para mais nada e não é partilhado com
+ninguém.
+
+{% if site.contacto_email and site.contacto_email != "" %}
+Se preferir evitar o formulário, escreva diretamente para
+<a href="mailto:{{ site.contacto_email }}">{{ site.contacto_email }}</a>.
 {% endif %}

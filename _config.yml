@@ -6,7 +6,7 @@ url: "https://appsespiritas.github.io"
 baseurl: ""
 lang: pt-PT
 contacto_email: "appsespiritas@gmail.com"
-formulario_google: ""
+formulario_google: "https://docs.google.com/forms/d/e/1FAIpQLSeHhIWaLvHiBDBMVvHVlE3uOGtH7t8y_LWrQGSAEzEIMturPg/viewform?embedded=true"
 
 collections:
   apps:
