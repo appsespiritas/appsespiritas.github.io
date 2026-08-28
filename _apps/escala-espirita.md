@@ -1,5 +1,7 @@
 ---
 titulo: "Escala Espírita"
+title: "Escala Espírita"
+description: "A escala dos espíritos de Allan Kardec, ordem a ordem. Aplicação Android gratuita, funciona sem internet."
 ordem: 3
 estado: publicada
 resumo: "A escala dos espíritos de Allan Kardec, ordem a ordem e classe a classe."

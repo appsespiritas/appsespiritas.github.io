@@ -1,5 +1,7 @@
 ---
 titulo: "Faq Espírita"
+title: "Faq Espírita"
+description: "Perguntas e respostas sobre Espiritismo, respondidas uma a uma. Aplicação Android gratuita, sem publicidade."
 ordem: 2
 estado: publicada
 resumo: "As perguntas que se fazem no início, respondidas uma a uma por quem estuda o assunto."
