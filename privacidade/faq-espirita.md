@@ -8,6 +8,9 @@ permalink: /apps/faq-espirita/privacidade/
 Esta é a única aplicação do Apps Espíritas com contas de utilizador. As outras
 não recolhem nada.
 
+A aplicação existe em duas versões, Android e iPhone/iPad. Onde houver
+diferenças entre elas, este texto indica-as.
+
 ## Quem trata os dados
 
 O Apps Espíritas, através de César Manuel Malainho de Oliveira, em Portugal.
@@ -28,7 +31,6 @@ Ao enviar uma pergunta:
 
 - O texto da pergunta
 - Se a pergunta é pública ou privada
-- A categoria da pergunta
 
 Não é recolhido mais nada. Não há entrada por conta Google ou Facebook, não é
 guardado o endereço IP, não há serviços de estatísticas ou de publicidade
@@ -37,11 +39,23 @@ dentro da aplicação e não há registo de utilização.
 ## Para que servem
 
 O nome e o email identificam a conta e permitem a entrada. A palavra-passe
-nunca é guardada em texto simples. A data de nascimento serve para mostrar
-apenas as perguntas e respostas adequadas à idade de quem está a ler.
+nunca é guardada em texto simples.
+
+A data de nascimento tem usos diferentes conforme a versão. Na versão Android,
+serve para mostrar apenas as perguntas e respostas adequadas à idade de quem
+está a ler. Na versão iPhone e iPad, que se destina a maiores de 18 anos,
+serve apenas para impedir que menores criem conta.
 
 As perguntas ficam associadas à conta para que a pessoa possa acompanhar as
 suas e receber as respostas.
+
+## Enviar perguntas sem conta
+
+Na versão iPhone e iPad é possível enviar uma pergunta sem ter conta. Nesse
+caso a pergunta é obrigatoriamente pública e não fica associada a ninguém: não
+é guardado nome, email nem qualquer outra forma de identificar quem a enviou.
+Quem a envia também não a consegue acompanhar, porque não há conta onde a
+mostrar.
 
 ## Perguntas públicas e privadas
 
@@ -71,9 +85,16 @@ seja.
 
 ## Moderação
 
-Uma pergunta pode ser apagada pelo Apps Espíritas se for ofensiva, se não
-tiver relação com o Espiritismo ou se não tiver sido feita a sério. O
-utilizador não pode apagar as perguntas que enviou.
+Nenhuma pergunta aparece na aplicação no momento em que é enviada. É lida
+primeiro, respondida, e só depois publicada.
+
+Uma pergunta pode ser recusada ou apagada pelo Apps Espíritas se for ofensiva,
+se não tiver relação com o Espiritismo ou se não tiver sido feita a sério.
+Quando uma pergunta contém pormenores que permitam identificar alguém, o texto
+é reescrito antes de ser publicado, mantendo a dúvida e retirando esses
+pormenores.
+
+O utilizador pode apagar as perguntas que enviou, a partir da aplicação.
 
 ## Durante quanto tempo
 
@@ -82,15 +103,22 @@ automática por inatividade.
 
 ## Eliminar a conta
 
+Na versão iPhone e iPad, a conta é eliminada a partir da própria aplicação, no
+ecrã «Conta». A eliminação é imediata e definitiva.
+
 {% if site.contacto_email and site.contacto_email != "" %}
-O pedido é feito por email para
+Na versão Android, o pedido é feito por email para
 <a href="mailto:{{ site.contacto_email }}">{{ site.contacto_email }}</a>, a
-partir do endereço associado à conta. É tratado no prazo máximo de 30 dias.
+partir do endereço associado à conta, e é tratado no prazo máximo de 30 dias.
 {% endif %}
 
-Com a conta são apagados o nome, o email, a palavra-passe e a data de
-nascimento. As perguntas públicas já respondidas continuam disponíveis, sem
-qualquer ligação a quem as fez. As perguntas privadas são apagadas.
+Em qualquer dos casos são apagados o nome, o email, a palavra-passe e a data
+de nascimento.
+
+As perguntas já enviadas não são apagadas: deixam de estar associadas à conta
+e passam a constar como perguntas sem autor. Quem quiser que uma pergunta
+desapareça pode apagá-la na aplicação antes de eliminar a conta, ou pedir a
+sua eliminação pelo email de contacto.
 
 ## Os seus direitos
 
@@ -102,4 +130,4 @@ apresentar reclamação à Comissão Nacional de Proteção de Dados.
 
 Se esta política mudar, a data em baixo muda também.
 
-<p class="mono">Última atualização: 28/08/2026</p>
+<p class="mono">Última atualização: 15/09/2026</p>
