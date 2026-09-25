@@ -5,6 +5,8 @@ title: "Privacidade — Escala Espírita"
 permalink: /apps/escala-espirita/privacidade/
 ---
 
+Esta aplicação existe apenas para Android.
+
 ## Que dados são recolhidos
 
 Nenhum. A aplicação não pede dados, não cria conta e não faz ligação a

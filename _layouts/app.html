@@ -1,13 +1,32 @@
 ---
 layout: default
 ---
-{%- if page.play and page.play != "" -%}
-  {%- assign ligacao_play = page.play -%}
-{%- elsif page.package and page.package != "" -%}
-  {%- capture ligacao_play -%}https://play.google.com/store/apps/details?id={{ page.package }}{%- endcapture -%}
-{%- else -%}
-  {%- assign ligacao_play = "" -%}
+{%- comment -%} Endereços das lojas, deduzidos do package e do Apple ID {%- endcomment -%}
+{%- assign and_pub = false -%}
+{%- assign ios_pub = false -%}
+{%- assign url_play = "" -%}
+{%- assign url_appstore = "" -%}
+
+{%- if page.android and page.android.estado == "publicada" -%}
+  {%- assign and_pub = true -%}
+  {%- if page.android.url and page.android.url != "" -%}
+    {%- assign url_play = page.android.url -%}
+  {%- else -%}
+    {%- capture url_play -%}https://play.google.com/store/apps/details?id={{ page.android.package }}{%- endcapture -%}
+  {%- endif -%}
 {%- endif -%}
+
+{%- if page.ios and page.ios.estado == "publicada" -%}
+  {%- assign ios_pub = true -%}
+  {%- if page.ios.url and page.ios.url != "" -%}
+    {%- assign url_appstore = page.ios.url -%}
+  {%- else -%}
+    {%- capture url_appstore -%}https://apps.apple.com/pt/app/id{{ page.ios.id }}{%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign n_cap_and = page.android.capturas | size -%}
+{%- assign n_cap_ios = page.ios.capturas | size -%}
 
 <article class="app">
 
@@ -26,24 +45,46 @@ layout: default
         <ul class="etiquetas">
           <li class="etiqueta etiqueta--forte">Gratuita</li>
           <li class="etiqueta">Sem publicidade</li>
-          {%- for plataforma in page.plataformas -%}
-          <li class="etiqueta">{{ plataforma }}</li>
+          {%- for etiqueta in page.etiquetas -%}
+          <li class="etiqueta">{{ etiqueta }}</li>
           {%- endfor -%}
         </ul>
       </div>
     </div>
 
     <div class="app__acao">
-      {%- if page.estado == "brevemente" -%}
-        <p class="aviso">Ainda não publicada. Está em preparação.</p>
-      {%- elsif ligacao_play != "" -%}
-        <a class="botao" href="{{ ligacao_play }}" rel="noopener">Instalar no Google Play</a>
+      {%- if and_pub or ios_pub -%}
+      <div class="lojas">
+        {%- if and_pub -%}
+        <a class="loja" href="{{ url_play }}" rel="noopener">
+          <span class="loja__acima">Descarregar no</span>
+          <span class="loja__nome">Google Play</span>
+        </a>
+        {%- endif -%}
+        {%- if ios_pub -%}
+        <a class="loja" href="{{ url_appstore }}" rel="noopener">
+          <span class="loja__acima">Descarregar na</span>
+          <span class="loja__nome">App&nbsp;Store</span>
+        </a>
+        {%- endif -%}
+      </div>
       {%- endif -%}
-      {%- if page.ios -%}
-        <p class="app__ios">Versão para iPhone e iPad em preparação.</p>
-      {%- elsif page.nota_ios -%}
-        <p class="app__ios">{{ page.nota_ios }}</p>
-      {%- endif -%}
+
+      {%- unless and_pub -%}
+        {%- if page.android.estado == "preparacao" -%}
+        <p class="app__nota">Versão Android em preparação.</p>
+        {%- elsif page.android.nota -%}
+        <p class="app__nota">{{ page.android.nota }}</p>
+        {%- endif -%}
+      {%- endunless -%}
+
+      {%- unless ios_pub -%}
+        {%- if page.ios.estado == "preparacao" -%}
+        <p class="app__nota">Versão para iPhone e iPad em preparação.</p>
+        {%- elsif page.ios.nota -%}
+        <p class="app__nota">{{ page.ios.nota }}</p>
+        {%- endif -%}
+      {%- endunless -%}
     </div>
   </header>
 
@@ -65,40 +106,105 @@ layout: default
       </section>
       {%- endif -%}
 
-      {%- if page.capturas and page.capturas.size > 0 -%}
+      {%- if n_cap_and > 0 or n_cap_ios > 0 -%}
       <section class="bloco">
         <h2 class="titulo-seccao">Ecrãs</h2>
-        <div class="capturas">
-          {%- for captura in page.capturas -%}
-          <img src="{% if captura contains '://' %}{{ captura }}{% else %}{{ captura | relative_url }}{% endif %}" alt="Ecrã da aplicação {{ page.titulo }}" loading="lazy">
-          {%- endfor -%}
+
+        {%- if n_cap_and > 0 and n_cap_ios > 0 -%}
+        {%- comment -%} Duas plataformas: separadores em CSS puro, sem JavaScript {%- endcomment -%}
+        <div class="ecras">
+          <input class="ecras__escolha" type="radio" name="ecras" id="ecras-android" checked>
+          <input class="ecras__escolha" type="radio" name="ecras" id="ecras-ios">
+
+          <div class="ecras__abas">
+            <label for="ecras-android">Android</label>
+            <label for="ecras-ios">iPhone</label>
+          </div>
+
+          <div class="ecras__paineis">
+            <div class="capturas ecras__painel ecras__painel--android">
+              {%- for captura in page.android.capturas -%}
+              <img src="{{ captura }}" alt="Ecrã Android da aplicação {{ page.titulo }}" loading="lazy">
+              {%- endfor -%}
+            </div>
+            <div class="capturas ecras__painel ecras__painel--ios">
+              {%- for captura in page.ios.capturas -%}
+              <img src="{{ captura }}" alt="Ecrã iPhone da aplicação {{ page.titulo }}" loading="lazy">
+              {%- endfor -%}
+            </div>
+          </div>
         </div>
+
+        {%- else -%}
+        <div class="capturas">
+          {%- if n_cap_and > 0 -%}
+            {%- for captura in page.android.capturas -%}
+            <img src="{{ captura }}" alt="Ecrã da aplicação {{ page.titulo }}" loading="lazy">
+            {%- endfor -%}
+          {%- else -%}
+            {%- for captura in page.ios.capturas -%}
+            <img src="{{ captura }}" alt="Ecrã da aplicação {{ page.titulo }}" loading="lazy">
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+        {%- endif -%}
       </section>
       {%- endif -%}
     </div>
 
     <aside class="app__ficha" aria-label="Ficha técnica">
       <h2 class="rotulo">Ficha técnica</h2>
-      <dl>
-        {%- if page.categoria -%}
-        <dt>Categoria no Google Play</dt><dd>{{ page.categoria }}</dd>
-        {%- endif -%}
-        {%- if page.classificacao -%}
-        <dt>Classificação etária</dt><dd>{{ page.classificacao }}</dd>
-        {%- endif -%}
-        {%- if page.requisitos -%}
-        <dt>Requisitos</dt><dd>{{ page.requisitos }}</dd>
-        {%- endif -%}
-        {%- if page.idiomas -%}
-        <dt>Idiomas</dt><dd>{{ page.idiomas | join: ", " }}</dd>
-        {%- endif -%}
-        {%- if page.package and page.package != "" -%}
-        <dt>Identificador</dt><dd class="mono">{{ page.package }}</dd>
-        {%- endif -%}
-        <dt>Preço</dt><dd>Gratuita, sem compras dentro da aplicação</dd>
-        <dt>Privacidade</dt>
-        <dd><a href="{{ page.url | append: 'privacidade/' | relative_url }}">Ver o que esta aplicação recolhe</a></dd>
-      </dl>
+
+      {%- if page.android -%}
+      <div class="ficha__grupo">
+        <h3 class="ficha__plataforma">Android</h3>
+        <dl>
+          {%- if page.android.categoria -%}
+          <dt>Categoria</dt><dd>{{ page.android.categoria }}</dd>
+          {%- endif -%}
+          {%- if page.android.classificacao -%}
+          <dt>Classificação etária</dt><dd>{{ page.android.classificacao }}</dd>
+          {%- endif -%}
+          {%- if page.android.requisitos -%}
+          <dt>Requisitos</dt><dd>{{ page.android.requisitos }}</dd>
+          {%- endif -%}
+          {%- if page.android.package -%}
+          <dt>Identificador</dt><dd class="mono">{{ page.android.package }}</dd>
+          {%- endif -%}
+        </dl>
+      </div>
+      {%- endif -%}
+
+      {%- if ios_pub -%}
+      <div class="ficha__grupo">
+        <h3 class="ficha__plataforma">iPhone e iPad</h3>
+        <dl>
+          {%- if page.ios.categoria -%}
+          <dt>Categoria</dt><dd>{{ page.ios.categoria }}</dd>
+          {%- endif -%}
+          {%- if page.ios.classificacao -%}
+          <dt>Classificação etária</dt><dd>{{ page.ios.classificacao }}</dd>
+          {%- endif -%}
+          {%- if page.ios.requisitos -%}
+          <dt>Requisitos</dt><dd>{{ page.ios.requisitos }}</dd>
+          {%- endif -%}
+          {%- if page.ios.id -%}
+          <dt>Apple ID</dt><dd class="mono">{{ page.ios.id }}</dd>
+          {%- endif -%}
+        </dl>
+      </div>
+      {%- endif -%}
+
+      <div class="ficha__grupo">
+        <dl>
+          {%- if page.idiomas -%}
+          <dt>Idiomas</dt><dd>{{ page.idiomas | join: ", " }}</dd>
+          {%- endif -%}
+          <dt>Preço</dt><dd>Gratuita, sem compras dentro da aplicação</dd>
+          <dt>Privacidade</dt>
+          <dd><a href="{{ page.url | append: 'privacidade/' | relative_url }}">Ver o que esta aplicação recolhe</a></dd>
+        </dl>
+      </div>
     </aside>
 
   </div>

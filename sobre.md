@@ -32,7 +32,11 @@ Pelas sugestões que chegam. Cada aplicação existente nasceu de uma falta
 concreta que alguém identificou. Se identificar outra,
 [diga qual é]({{ '/contacto/' | relative_url }}).
 
-## Para iPhone e iPad
+## Android e iPhone
 
-As aplicações existem hoje apenas para Android. As versões para iOS estão em
-preparação e serão igualmente gratuitas.
+Todas as aplicações existem para Android, no Google Play. Os Centros Espíritas
+de Portugal e a Faq Espírita existem também para iPhone e iPad, na App Store,
+igualmente gratuitas.
+
+A Escala Espírita continua só no Android. O que ela mostra vai passar para a
+aplicação das obras de Allan Kardec, e é nessa forma que chegará ao iPhone.

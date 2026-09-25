@@ -5,6 +5,8 @@ title: "Privacidade — Centros Espíritas de Portugal"
 permalink: /apps/centros-espiritas-de-portugal/privacidade/
 ---
 
+Esta política vale para as duas versões da aplicação, Android e iPhone/iPad.
+
 ## Que dados são recolhidos
 
 Nenhum. A aplicação não pede nome, email nem telefone, não cria conta e não
@@ -33,4 +35,4 @@ Para qualquer questão sobre esta política, escreva para
 <a href="mailto:{{ site.contacto_email }}">{{ site.contacto_email }}</a>.
 {% endif %}
 
-<p class="mono">Última atualização: 28/08/2026</p>
+<p class="mono">Última atualização: 24/09/2026</p>
