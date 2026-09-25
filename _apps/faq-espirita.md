@@ -1,7 +1,7 @@
 ---
 titulo: "Faq Espírita"
 title: "Faq Espírita"
-description: "Perguntas e respostas sobre Espiritismo, respondidas uma a uma. Gratuita para Android e iPhone, sem publicidade."
+description: "Perguntas e respostas sobre Espiritismo, respondidas uma a uma. Gratuita para Android, iPhone e iPad, sem publicidade."
 ordem: 2
 resumo: "As perguntas que se fazem no início, respondidas uma a uma por quem estuda o assunto."
 icone: https://play-lh.googleusercontent.com/FGmUJCb-stsaSjYQL9WMVbx2Wnls3JUO_Pz5WXjGKjo2eamlSBEoUKrf5z1nsD4L7WzhqDKbYRKjJUwssWEjAiI=s512
@@ -41,8 +41,9 @@ funcionalidades:
   - "Cada resposta é escrita e revista antes de ficar visível"
   - "Lista do que já foi respondido e do que está por responder"
   - "Conta pessoal para acompanhar as perguntas enviadas"
-  - "Enviar uma pergunta sem criar conta — só no iPhone e iPad"
-  - "Apagar as perguntas enviadas e eliminar a conta dentro da aplicação — só no iPhone e iPad"
+  - "Enviar uma pergunta sem criar conta"
+  - "Apagar as perguntas privadas que enviou"
+  - "Eliminar a conta dentro da aplicação — no iPhone e no iPad"
 ---
 
 Ninguém chega ao Espiritismo sem perguntas. O que acontece depois da morte,
@@ -52,10 +53,11 @@ quatrocentas páginas que ninguém abre à primeira.
 
 Esta aplicação inverte a ordem. Começa-se pela pergunta.
 
-Quem não encontrar a sua pergunta na lista pode enviá-la. Não aparece logo:
-a equipa lê, escreve a resposta e só depois a publica para toda a gente. É
-mais lento do que um fórum, e é essa a intenção — o que fica na aplicação foi
-pensado antes de ser escrito.
+Quem não encontrar a sua pergunta na lista pode enviá-la. Não aparece logo: a
+equipa lê, escreve a resposta e só depois a publica — para toda a gente, se a
+pergunta for pública, ou apenas para quem a fez, se for privada. É mais lento
+do que um fórum, e é essa a intenção — o que fica na aplicação foi pensado
+antes de ser escrito.
 
 ## O que muda entre as duas versões
 
@@ -63,6 +65,7 @@ A versão para iPhone e iPad destina-se a maiores de 18 anos e mostra todas as
 perguntas a quem entra. A versão Android separa as perguntas por faixa etária,
 e por isso está classificada para maiores de 12.
 
-No iPhone e no iPad é possível enviar uma pergunta sem criar conta — nesse
-caso a pergunta é pública e não fica ligada a ninguém. Também é possível
-apagar as perguntas enviadas e eliminar a conta sem sair da aplicação.
+Tanto no Android como no iPhone e no iPad é possível enviar uma pergunta sem
+criar conta — nesse caso a pergunta é pública e não fica ligada a ninguém. Em
+ambos se podem apagar as perguntas privadas que se enviaram; no iPhone e no
+iPad é ainda possível eliminar a conta sem sair da aplicação.

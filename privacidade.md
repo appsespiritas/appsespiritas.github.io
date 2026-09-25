@@ -12,8 +12,8 @@ têm rastreadores e não vendem nem cedem dados a ninguém.
 Duas das três não recolhem nada. A terceira tem contas de utilizador, e por
 isso guarda o que é preciso para essas contas funcionarem.
 
-Cada aplicação tem a sua política, e cada uma cobre as versões Android e
-iPhone dessa aplicação:
+Cada aplicação tem a sua política, e cada uma cobre as versões Android,
+iPhone e iPad dessa aplicação:
 
 <ul class="lista-privacidade">
 {%- assign lista = site.apps | sort: "ordem" -%}

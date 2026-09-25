@@ -1,7 +1,7 @@
 ---
 titulo: "Centros Espíritas de Portugal"
 title: "Centros Espíritas de Portugal"
-description: "Diretório dos centros espíritas de Portugal, com morada, contactos e caminho no mapa. Gratuita para Android e iPhone."
+description: "Diretório dos centros espíritas de Portugal, com morada, contactos e caminho no mapa. Gratuita para Android, iPhone e iPad."
 ordem: 1
 resumo: "Onde ficam os centros espíritas do país, com contactos, horários e caminho no mapa."
 icone: https://play-lh.googleusercontent.com/r2D4YBjt0KBD-7_LqWM0wJ2_K5Xc7_M34jtFufSPU_kLO64kfp9C929dDQdsIscXsy3WinB9HwssHsCLp35i_A=s512

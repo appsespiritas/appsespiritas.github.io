@@ -5,7 +5,7 @@ title: "Privacidade — Centros Espíritas de Portugal"
 permalink: /apps/centros-espiritas-de-portugal/privacidade/
 ---
 
-Esta política vale para as duas versões da aplicação, Android e iPhone/iPad.
+Esta política vale para as versões Android, iPhone e iPad da aplicação.
 
 ## Que dados são recolhidos
 

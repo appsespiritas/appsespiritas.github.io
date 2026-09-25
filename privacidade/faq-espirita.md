@@ -8,8 +8,8 @@ permalink: /apps/faq-espirita/privacidade/
 Esta é a única aplicação do Apps Espíritas com contas de utilizador. As outras
 não recolhem nada.
 
-A aplicação existe em duas versões, Android e iPhone/iPad. Onde houver
-diferenças entre elas, este texto indica-as.
+A aplicação existe para Android, iPhone e iPad. Onde houver diferenças entre
+as versões, este texto indica-as.
 
 ## Quem trata os dados
 
@@ -51,7 +51,7 @@ suas e receber as respostas.
 
 ## Enviar perguntas sem conta
 
-Na versão iPhone e iPad é possível enviar uma pergunta sem ter conta. Nesse
+Em qualquer das versões é possível enviar uma pergunta sem ter conta. Nesse
 caso a pergunta é obrigatoriamente pública e não fica associada a ninguém: não
 é guardado nome, email nem qualquer outra forma de identificar quem a enviou.
 Quem a envia também não a consegue acompanhar, porque não há conta onde a
@@ -94,7 +94,9 @@ Quando uma pergunta contém pormenores que permitam identificar alguém, o texto
 é reescrito antes de ser publicado, mantendo a dúvida e retirando esses
 pormenores.
 
-O utilizador pode apagar as perguntas que enviou, a partir da aplicação.
+O utilizador pode apagar, a partir da aplicação, as perguntas privadas que
+enviou. As perguntas públicas, uma vez publicadas, só são retiradas a pedido
+pelo email de contacto.
 
 ## Durante quanto tempo
 
@@ -103,7 +105,7 @@ automática por inatividade.
 
 ## Eliminar a conta
 
-Na versão iPhone e iPad, a conta é eliminada a partir da própria aplicação, no
+No iPhone e no iPad, a conta é eliminada a partir da própria aplicação, no
 ecrã «Conta». A eliminação é imediata e definitiva.
 
 {% if site.contacto_email and site.contacto_email != "" %}
@@ -117,8 +119,8 @@ de nascimento.
 
 As perguntas já enviadas não são apagadas: deixam de estar associadas à conta
 e passam a constar como perguntas sem autor. Quem quiser que uma pergunta
-desapareça pode apagá-la na aplicação antes de eliminar a conta, ou pedir a
-sua eliminação pelo email de contacto.
+desapareça pode apagá-la na aplicação antes de eliminar a conta, no caso das
+privadas, ou pedir a sua eliminação pelo email de contacto.
 
 ## Os seus direitos
 
@@ -130,4 +132,4 @@ apresentar reclamação à Comissão Nacional de Proteção de Dados.
 
 Se esta política mudar, a data em baixo muda também.
 
-<p class="mono">Última atualização: 15/09/2026</p>
+<p class="mono">Última atualização: 25/09/2026</p>

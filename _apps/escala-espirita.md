@@ -22,7 +22,7 @@ android:
 
 ios:
   estado: nao_previsto
-  nota: "Não vai existir sozinha no iPhone. O conteúdo passa a fazer parte da aplicação das obras de Allan Kardec."
+  nota: "Não vai existir sozinha no iPhone nem no iPad. O conteúdo passa a fazer parte da aplicação das obras de Allan Kardec, em breve."
 
 funcionalidades:
   - "As três ordens da escala, com as respetivas classes"

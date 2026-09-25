@@ -17,9 +17,9 @@
       {%- endif -%}
       {%- if include.app.ios.estado == "publicada" -%}
         {%- if disponivel != "" -%}
-          {%- assign disponivel = disponivel | append: " e iPhone" -%}
+          {%- assign disponivel = disponivel | append: ", iPhone e iPad" -%}
         {%- else -%}
-          {%- assign disponivel = "iPhone" -%}
+          {%- assign disponivel = "iPhone e iPad" -%}
         {%- endif -%}
       {%- endif -%}
       {%- if disponivel != "" -%}

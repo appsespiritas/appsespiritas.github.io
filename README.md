@@ -77,7 +77,7 @@ dentro do bloco dessa plataforma, e esse ganha ao `package`/`id`.
 ### Capturas de ecrã
 
 Quando uma aplicação tem capturas nas duas plataformas, a página mostra
-separadores Android/iPhone. São feitos só com CSS, sem JavaScript. Com uma só
+separadores Android / iPhone e iPad. São feitos só com CSS, sem JavaScript. Com uma só
 plataforma, as capturas aparecem sem separadores.
 
 ## Onde vivem as imagens
